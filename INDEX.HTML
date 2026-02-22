@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>epicgamer.biz</title>
+
+<style>
+body{
+    background:black;
+    color:white;
+    font-family:Arial;
+    text-align:center;
+}
+
+header{
+    background:#111;
+    padding:20px;
+    box-shadow:0 0 10px cyan;
+}
+
+h1{color:cyan;}
+
+.games{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:15px;
+    padding:20px;
+}
+
+.game{
+    background:#1a1a1a;
+    padding:15px;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.game:hover{
+    transform:scale(1.05);
+}
+
+button{
+    padding:8px 15px;
+    background:cyan;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>🎮 epicgamer.biz</h1>
+<h3>BY MADHAV SEJPAL</h3>
+</header>
+
+<h2>Choose Your Game 👇</h2>
+
+<div id="games" class="games"></div>
+
+<script>
+
+const games = [
+
+{name:"Snake",link:"https://playsnake.org/"},
+{name:"2048",link:"https://play2048.co/"},
+{name:"Chrome Dino",link:"https://chromedino.com/"},
+{name:"Tetris",link:"https://tetris.com/play-tetris"},
+{name:"Pacman",link:"https://www.google.com/logos/2010/pacman10-i.html"},
+{name:"Agar.io",link:"https://agar.io"},
+{name:"Slither.io",link:"https://slither.io"},
+{name:"Krunker FPS",link:"https://krunker.io"},
+{name:"Shell Shockers",link:"https://shellshock.io"},
+{name:"Paper.io",link:"https://paper-io.com"},
+{name:"Skribbl.io",link:"https://skribbl.io"},
+{name:"Little Alchemy",link:"https://littlealchemy.com"},
+{name:"Little Alchemy 2",link:"https://littlealchemy2.com"},
+{name:"GeoGuessr Free",link:"https://www.geoguessr.com/free"},
+{name:"Cookie Clicker",link:"https://orteil.dashnet.org/cookieclicker/"},
+{name:"Townscaper",link:"https://oskarstalberg.com/Townscaper/"},
+{name:"HexGL Racing",link:"https://hexgl.bkcore.com"},
+{name:"QWOP",link:"https://www.foddy.net/Athletics.html"},
+{name:"Helix Jump",link:"https://helixjump.io"},
+{name:"Slope Game",link:"https://slopegame.io"},
+{name:"Run 3",link:"https://run3.io"},
+{name:"Basketball Stars",link:"https://basketballstars.io"},
+{name:"Moto X3M",link:"https://motox3m.co"},
+{name:"Tunnel Rush",link:"https://tunnelrush.com"},
+{name:"Stickman Hook",link:"https://stickmanhook.io"},
+{name:"Fireboy & Watergirl",link:"https://fireboyandwatergirl.io"},
+{name:"Drift Hunters",link:"https://drifthunters2.io"},
+{name:"Madalin Cars",link:"https://madalincarsmultiplayer.com"},
+{name:"1v1.LOL",link:"https://1v1.lol"},
+{name:"Surviv.io",link:"https://surviv.io"},
+{name:"Zombs Royale",link:"https://zombsroyale.io"},
+{name:"Diep.io",link:"https://diep.io"},
+{name:"Bonk.io",link:"https://bonk.io"},
+{name:"Venge.io",link:"https://venge.io"},
+{name:"Smash Karts",link:"https://smashkarts.io"},
+{name:"Raid Land",link:"https://raidland.io"},
+{name:"Crazy Roll",link:"https://crazyroll3d.io"},
+{name:"Snow Rider 3D",link:"https://snowrider3d.com"},
+{name:"Temple Run Online",link:"https://templerun.ee"},
+{name:"Subway Surfers Web",link:"https://subwaysurfersgame.io"},
+{name:"Pixel Shooter",link:"https://pixelshooter.io"},
+{name:"Mini Golf",link:"https://minigolfclub.io"},
+{name:"Chess",link:"https://www.chess.com/play/computer"},
+{name:"Checkers",link:"https://cardgames.io/checkers/"},
+{name:"Sudoku",link:"https://sudoku.com"},
+{name:"Solitaire",link:"https://solitaired.com"},
+{name:"Minesweeper",link:"https://minesweeperonline.com"},
+{name:"Typing Racer",link:"https://play.typeracer.com"},
+{name:"Wordle",link:"https://www.nytimes.com/games/wordle"},
+{name:"Flappy Bird",link:"https://flappybird.io"},
+{name:"Doodle Jump",link:"https://doodlejump.io"},
+{name:"2048 Cupcakes",link:"https://2048cupcakes.com"},
+{name:"Tower Defense",link:"https://towerdefense.io"}
+
+];
+
+const container=document.getElementById("games");
+
+games.forEach(game=>{
+container.innerHTML+=`
+<div class="game">
+<h3>${game.name}</h3>
+<button onclick="window.open('${game.link}','_blank')">Play</button>
+</div>`;
+});
+
+</script>
+
+</body>
+</html>
